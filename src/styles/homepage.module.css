@@ -1,0 +1,13 @@
+.homePageContainer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.logoBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

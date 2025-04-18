@@ -1,0 +1,25 @@
+.resume {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  background: black;
+  padding: 0;
+  margin: 0;
+  height: 518px;
+}
+
+.resume img {
+  width: 400px;
+
+  margin-top: 30px;
+  margin-left: 3px;
+}
+
+.resumeContainer {
+  background-color: #245dda;
+  width: 406px;
+  height: 555px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
