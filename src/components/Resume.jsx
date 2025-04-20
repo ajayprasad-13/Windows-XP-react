@@ -1,11 +1,16 @@
 import style from "../styles/resume.module.css";
 import resumeimg from "../assets/resume.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleResume } from "./slices/xpstore";
 
-export default function Resume({ isResumeOpen, onOpenResume }) {
+export default function Resume() {
+  const isResumeOpen = useSelector((state) => state.xp.isResumeOpen);
+
+  const dispatch = useDispatch();
+
   function handleResumeClose() {
     if (!isResumeOpen) return;
-
-    onOpenResume(!isResumeOpen);
+    dispatch(toggleResume());
   }
 
   return (

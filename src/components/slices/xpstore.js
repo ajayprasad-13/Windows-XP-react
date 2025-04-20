@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   isStartOpen: false,
   isResumeOpen: false,
+  isComingSoonOpen: false,
 };
 
 const xpSlice = createSlice({
@@ -15,9 +16,13 @@ const xpSlice = createSlice({
     toggleStartMenu: (state) => {
       state.isStartOpen = !state.isStartOpen;
     },
+    toggleComingSoon: (state) => {
+      state.isComingSoonOpen = !state.isComingSoonOpen;
+    },
   },
 });
 
-export const { toggleStartMenu, toggleResume } = xpSlice.actions;
+export const { toggleStartMenu, toggleResume, toggleComingSoon } =
+  xpSlice.actions;
 
 export default xpSlice.reducer;

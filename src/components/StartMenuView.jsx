@@ -14,6 +14,9 @@ import searchicon from "../assets/search.png";
 import logofficon from "../assets/logout.png";
 import shutdownicon from "../assets/shutdown.png";
 
+import { toggleComingSoon } from "../components/slices/xpstore";
+import { useDispatch, useSelector } from "react-redux";
+
 const lefttopSectionData = [
   {
     src: ieicon,
@@ -72,6 +75,14 @@ const rightBottomSectionData = [
 ];
 
 export default function StartMenuViw() {
+  const isComingSoonOpen = useSelector((state) => state.xp.isComingSoonOpen);
+
+  const dispatch = useDispatch();
+
+  function handleOpenComingSoon() {
+    dispatch(toggleComingSoon());
+  }
+
   return (
     // Start Menu Container
 
@@ -87,7 +98,11 @@ export default function StartMenuViw() {
             {/* Start Menu top data */}
 
             {lefttopSectionData.map((item, index) => (
-              <button key={index} className={style.startData}>
+              <button
+                onClick={handleOpenComingSoon}
+                key={index}
+                className={style.startData}
+              >
                 <img src={item.src} />
                 <div className={style.startText}>
                   <p className={style.startTextTitle}>{item.title}</p>
@@ -103,7 +118,11 @@ export default function StartMenuViw() {
             {/* Start Menu bottom data */}
 
             {leftBottomSectionData.map((item, index) => (
-              <button key={index} className={style.startData}>
+              <button
+                onClick={handleOpenComingSoon}
+                key={index}
+                className={style.startData}
+              >
                 <img src={item.src} />
                 <p>{item.title}</p>
               </button>
@@ -126,7 +145,11 @@ export default function StartMenuViw() {
           {/* Start Menu right side top data html */}
 
           {rightTopSectionData.map((item, index) => (
-            <button key={index} className={style.startData}>
+            <button
+              onClick={handleOpenComingSoon}
+              key={index}
+              className={style.startData}
+            >
               <img src={item.src} />
               <p className={style.rightTopText}>{item.title}</p>
             </button>
@@ -136,7 +159,11 @@ export default function StartMenuViw() {
           {/* Start menu middle data html */}
 
           {rightMiddleSectionData.map((item, index) => (
-            <button key={index} className={style.startData}>
+            <button
+              onClick={handleOpenComingSoon}
+              key={index}
+              className={style.startData}
+            >
               <img src={item.src} />
               <p className={style.rightmiddletext}>{item.title}</p>
             </button>
@@ -146,7 +173,11 @@ export default function StartMenuViw() {
           {/* Start menu bottom data html */}
 
           {rightBottomSectionData.map((item, index) => (
-            <button key={index} className={style.startData}>
+            <button
+              onClick={handleOpenComingSoon}
+              key={index}
+              className={style.startData}
+            >
               <img src={item.src} />
               <p className={style.rightmiddletext}>{item.title}</p>
             </button>
@@ -156,11 +187,11 @@ export default function StartMenuViw() {
 
       {/* log off and turn off the computer html */}
       <div className={style.turnoncon}>
-        <button className={style.logoff}>
+        <button onClick={handleOpenComingSoon} className={style.logoff}>
           <img src={logofficon} />
           <p className={style.logOffText}>Log off</p>
         </button>
-        <button className={style.shutDown}>
+        <button onClick={handleOpenComingSoon} className={style.shutDown}>
           <img src={shutdownicon} />
           <p className={style.logOffText}>Turn Off Computer</p>
         </button>
