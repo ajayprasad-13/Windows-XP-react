@@ -3,9 +3,13 @@ import startLogo from "../assets/startLogo.png";
 import muteLogo from "../assets/muteLogo.png";
 import { useEffect, useState } from "react";
 import startBtn from "../assets/start.png";
+import { useDispatch } from "react-redux";
+import { toggleStartMenu } from "../components/slices/xpstore";
 
-export default function Taskbar({ onOpenStart }) {
+export default function Taskbar() {
   const [time, setTime] = useState("");
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,7 +25,12 @@ export default function Taskbar({ onOpenStart }) {
   return (
     <>
       <div className={style.taskBar}>
-        <button onClick={onOpenStart} className={style.startBtn}></button>
+        <button
+          onClick={() => {
+            dispatch(toggleStartMenu());
+          }}
+          className={style.startBtn}
+        ></button>
 
         <div className={style.taskBarRight}>
           <img src={muteLogo} />

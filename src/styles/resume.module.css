@@ -20,6 +20,20 @@
   width: 406px;
   height: 555px;
   display: flex;
+  flex-direction: column;
   justify-self: center;
   align-items: center;
+}
+
+.closeBtn {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-image: url("../assets/closebtn.png");
+  background-size: contain; /* or 'cover' or exact pixels */
+  background-repeat: no-repeat;
+  background-position: ;
 }
