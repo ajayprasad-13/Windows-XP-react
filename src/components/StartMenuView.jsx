@@ -16,6 +16,7 @@ import shutdownicon from "../assets/shutdown.png";
 
 import { toggleComingSoon } from "../components/slices/xpstore";
 import { useDispatch, useSelector } from "react-redux";
+import { Typography } from "react-windows-xp";
 
 const lefttopSectionData = [
   {
@@ -90,7 +91,7 @@ export default function StartMenuViw() {
       {/* Profile Picture div */}
       <div className={style.profile}>
         <img src={profileImg} />
-        <p>Admin</p>
+        <Typography variant="paragraph">Admin</Typography>
       </div>
       <div className={style.boxContainer}>
         <div className={style.leftSection}>
@@ -105,8 +106,18 @@ export default function StartMenuViw() {
               >
                 <img src={item.src} />
                 <div className={style.startText}>
-                  <p className={style.startTextTitle}>{item.title}</p>
-                  <p className={style.startTextDesc}>{item.desc}</p>
+                  <Typography
+                    variant="paragraph"
+                    className={style.startTextTitle}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography
+                    variant="paragraph"
+                    className={style.startTextDesc}
+                  >
+                    {item.desc}
+                  </Typography>
                 </div>
               </button>
             ))}
@@ -124,7 +135,7 @@ export default function StartMenuViw() {
                 className={style.startData}
               >
                 <img src={item.src} />
-                <p>{item.title}</p>
+                <Typography variant="paragraph">{item.title}</Typography>
               </button>
             ))}
           </div>
@@ -132,7 +143,7 @@ export default function StartMenuViw() {
             <hr className={style.horiline} />
             <div className={style.leftallprog}>
               <button className={style.allprog}>
-                <p>All Programs</p>
+                <Typography variant="paragraph">All Programs</Typography>
                 <img src={allprogbtn} />
               </button>
             </div>
@@ -151,7 +162,9 @@ export default function StartMenuViw() {
               className={style.startData}
             >
               <img src={item.src} />
-              <p className={style.rightTopText}>{item.title}</p>
+              <Typography variant="paragraph" className={style.rightTopText}>
+                {item.title}
+              </Typography>
             </button>
           ))}
           <hr className={style.horiline} />
@@ -165,7 +178,9 @@ export default function StartMenuViw() {
               className={style.startData}
             >
               <img src={item.src} />
-              <p className={style.rightmiddletext}>{item.title}</p>
+              <Typography variant="paragraph" className={style.rightmiddletext}>
+                {item.title}
+              </Typography>
             </button>
           ))}
           <hr className={style.horiline} />
@@ -179,7 +194,9 @@ export default function StartMenuViw() {
               className={style.startData}
             >
               <img src={item.src} />
-              <p className={style.rightmiddletext}>{item.title}</p>
+              <Typography variant="paragraph" className={style.rightmiddletext}>
+                {item.title}
+              </Typography>
             </button>
           ))}
         </div>
@@ -189,11 +206,19 @@ export default function StartMenuViw() {
       <div className={style.turnoncon}>
         <button onClick={handleOpenComingSoon} className={style.logoff}>
           <img src={logofficon} />
-          <p className={style.logOffText}>Log off</p>
+          <Typography variant="paragraph" className={style.logOffText}>
+            Log off
+          </Typography>
         </button>
         <button onClick={handleOpenComingSoon} className={style.shutDown}>
           <img src={shutdownicon} />
-          <p className={style.logOffText}>Turn Off Computer</p>
+          <Typography
+            style={{ outline: "none" }}
+            variant="paragraph"
+            className={style.logOffText}
+          >
+            Turn Off Computer
+          </Typography>
         </button>
       </div>
     </div>

@@ -21,13 +21,11 @@ export default function ComingSoon() {
       >
         <div style={{ width: "250px" }}>
           <Error
+            className="withOutline"
             confirmText="Ok"
             iconSize={48}
             onClose={handleComingSoon}
             onConfirm={handleComingSoon}
-            onHelp={function noRefCheck() {}}
-            onMaximize={function noRefCheck() {}}
-            onMinimize={function noRefCheck() {}}
             title="Error"
           >
             <p>Coming Soon</p>

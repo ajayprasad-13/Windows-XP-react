@@ -1,0 +1,13 @@
+button,
+button:focus,
+button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:not(.withOutline),
+button:not(.withOutline):focus,
+button:not(.withOutline):focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
