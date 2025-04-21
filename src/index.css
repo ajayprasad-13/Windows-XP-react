@@ -1,13 +1,17 @@
-button,
-button:focus,
-button:focus-visible {
+.noOutline,
+.noOutline:focus,
+.noOutline:focus-visible {
   outline: none !important;
   box-shadow: none !important;
 }
 
-button:not(.withOutline),
-button:not(.withOutline):focus,
-button:not(.withOutline):focus-visible {
-  outline: none !important;
+.noWhiteFlash {
   box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.noWhiteFlash:active {
+  box-shadow: none !important;
+  outline: none !important;
 }

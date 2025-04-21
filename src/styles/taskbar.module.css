@@ -5,6 +5,10 @@
   width: 100%;
   height: 30px;
   background-color: #245dda;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -16,6 +20,7 @@
 
   object-fit: fill;
   width: 100px;
+  height: 100%;
   margin: 0;
   padding: 0;
   display: flex;

@@ -1,6 +1,6 @@
 .resume {
   position: absolute;
-  top: 10%;
+
   left: 40%;
   background: black;
   padding: 0;
@@ -11,21 +11,6 @@
 
 .resume img {
   width: 400px;
-
-  margin-top: 35px;
-  margin-left: 3px;
-}
-
-.resumeContainer {
-  background-color: #245dda;
-  width: 406px;
-  height: 555px;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .buttons {
@@ -36,8 +21,9 @@
 
 .closeBtn {
   justify-content: end;
-  width: 30px;
-  height: 30px;
+  margin-top: 2px;
+  width: 22px;
+  height: 22px;
   background: none;
   border: none;
   padding: 0;
