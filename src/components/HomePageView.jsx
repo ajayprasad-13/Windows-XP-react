@@ -28,10 +28,10 @@ export default function HomePageView() {
   return (
     <div onClick={handleBackgroundClick} className={style.homePageView}>
       <div>
-        <button onClick={handleOpenResume} className={style.logoBtn}>
+        <div onClick={handleOpenResume} className={style.logoBtn}>
           <img src={pdflogo} alt="Resume icon" />
           <p>Resume.pdf</p>
-        </button>
+        </div>
       </div>
 
       <div>{isResumeOpen && <Resume />}</div>

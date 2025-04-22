@@ -15,29 +15,10 @@ export default function Resume() {
   }
 
   return (
-    // <div className={style.resume}>
-    //   <div className={style.resumeContainer}>
-    //     <div className={style.buttons}>
-    //       <button
-    //         onClick={handleResumeClose}
-    //         className={style.closeBtn}
-    //       ></button>
-    //     </div>
-    //     <img src={resumeimg} />
-    //   </div>
-    // </div>
     <div className={style.resume}>
-      <Window
-        onClose={function noRefCheck() {}}
-        onHelp={function noRefCheck() {}}
-        onMaximize={function noRefCheck() {}}
-        onMinimize={function noRefCheck() {}}
-      >
+      <Window>
         <div className={style.buttons}>
-          <button
-            onClick={handleResumeClose}
-            className={style.closeBtn}
-          ></button>
+          <div onClick={handleResumeClose} className={style.closeBtn}></div>
         </div>
         <img src={resumeimg} />
       </Window>

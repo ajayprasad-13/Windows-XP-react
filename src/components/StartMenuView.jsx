@@ -99,7 +99,7 @@ export default function StartMenuViw() {
             {/* Start Menu top data */}
 
             {lefttopSectionData.map((item, index) => (
-              <button
+              <div
                 onClick={handleOpenComingSoon}
                 key={index}
                 className={style.startData}
@@ -119,7 +119,7 @@ export default function StartMenuViw() {
                     {item.desc}
                   </Typography>
                 </div>
-              </button>
+              </div>
             ))}
 
             {/* Horizontal line */}
@@ -129,23 +129,23 @@ export default function StartMenuViw() {
             {/* Start Menu bottom data */}
 
             {leftBottomSectionData.map((item, index) => (
-              <button
+              <div
                 onClick={handleOpenComingSoon}
                 key={index}
                 className={style.startData}
               >
                 <img src={item.src} />
                 <Typography variant="paragraph">{item.title}</Typography>
-              </button>
+              </div>
             ))}
           </div>
           <div>
             <hr className={style.horiline} />
             <div className={style.leftallprog}>
-              <button className={style.allprog}>
+              <div className={style.allprog}>
                 <Typography variant="paragraph">All Programs</Typography>
                 <img src={allprogbtn} />
-              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function StartMenuViw() {
           {/* Start Menu right side top data html */}
 
           {rightTopSectionData.map((item, index) => (
-            <button
+            <div
               onClick={handleOpenComingSoon}
               key={index}
               className={style.startData}
@@ -165,14 +165,14 @@ export default function StartMenuViw() {
               <Typography variant="paragraph" className={style.rightTopText}>
                 {item.title}
               </Typography>
-            </button>
+            </div>
           ))}
           <hr className={style.horiline} />
 
           {/* Start menu middle data html */}
 
           {rightMiddleSectionData.map((item, index) => (
-            <button
+            <div
               onClick={handleOpenComingSoon}
               key={index}
               className={style.startData}
@@ -181,14 +181,14 @@ export default function StartMenuViw() {
               <Typography variant="paragraph" className={style.rightmiddletext}>
                 {item.title}
               </Typography>
-            </button>
+            </div>
           ))}
           <hr className={style.horiline} />
 
           {/* Start menu bottom data html */}
 
           {rightBottomSectionData.map((item, index) => (
-            <button
+            <div
               onClick={handleOpenComingSoon}
               key={index}
               className={style.startData}
@@ -197,20 +197,20 @@ export default function StartMenuViw() {
               <Typography variant="paragraph" className={style.rightmiddletext}>
                 {item.title}
               </Typography>
-            </button>
+            </div>
           ))}
         </div>
       </div>
 
       {/* log off and turn off the computer html */}
       <div className={style.turnoncon}>
-        <button onClick={handleOpenComingSoon} className={style.logoff}>
+        <div onClick={handleOpenComingSoon} className={style.logoff}>
           <img src={logofficon} />
           <Typography variant="paragraph" className={style.logOffText}>
             Log off
           </Typography>
-        </button>
-        <button onClick={handleOpenComingSoon} className={style.shutDown}>
+        </div>
+        <div onClick={handleOpenComingSoon} className={style.shutDown}>
           <img src={shutdownicon} />
           <Typography
             style={{ outline: "none" }}
@@ -219,7 +219,7 @@ export default function StartMenuViw() {
           >
             Turn Off Computer
           </Typography>
-        </button>
+        </div>
       </div>
     </div>
   );

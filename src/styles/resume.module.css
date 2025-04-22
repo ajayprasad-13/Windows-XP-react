@@ -1,5 +1,6 @@
 .resume {
-  position: absolute;
+  position: relative;
+  width: 416px;
 
   left: 40%;
   background: black;
@@ -20,7 +21,44 @@
 }
 
 .closeBtn {
-  justify-content: end;
+  all: unset;
+
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+
+  /* Ensure the background image is set properly */
+  background-image: url("../assets/closebtn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  /* Clear any background gradients or styles from the UI component */
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+
+  /* Remove any box-shadow or focus effects from global button styles */
+  box-shadow: none !important;
+
+  /* Make sure transitions are not applied */
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Keep button behavior for hover/focus/active states */
+button.closeBtn:hover,
+button.closeBtn:focus,
+button.closeBtn:active {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  transform: none !important;
+}
+
+/* .closeBtn {
+  all: unset;
   margin-top: 2px;
   width: 22px;
   height: 22px;
@@ -31,4 +69,16 @@
   background-image: url("../assets/closebtn.png");
   background-size: contain;
   background-repeat: no-repeat;
-}
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+    outline: none !important;
+    border: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+} */

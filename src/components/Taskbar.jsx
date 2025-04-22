@@ -29,12 +29,12 @@ export default function Taskbar() {
           className="nativeButton"
           style={{ margin: "0", padding: "0", height: "100%" }}
         >
-          <button
+          <div
             onClick={() => {
               dispatch(toggleStartMenu());
             }}
-            className={`${style.startBtn} noWhiteFlash noBgChange`}
-          ></button>
+            className={`${style.startBtn} `}
+          ></div>
         </div>
 
         <div className={style.taskBarRight}>
