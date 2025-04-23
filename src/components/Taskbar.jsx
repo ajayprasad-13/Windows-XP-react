@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import startBtn from "../assets/start.png";
 import { useDispatch } from "react-redux";
 import { toggleStartMenu } from "../components/slices/xpstore";
+import { Typography } from "react-windows-xp";
 
 export default function Taskbar() {
   const [time, setTime] = useState("");
@@ -39,7 +40,7 @@ export default function Taskbar() {
 
         <div className={style.taskBarRight}>
           <img src={muteLogo} />
-          <p>{time}</p>
+          <Typography variant="paragraph">{time}</Typography>
         </div>
       </div>
     </>

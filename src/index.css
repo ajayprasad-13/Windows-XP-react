@@ -15,3 +15,7 @@
   box-shadow: none !important;
   outline: none !important;
 }
+
+.window-body {
+  margin: 0 3px 0 8px !important;
+}

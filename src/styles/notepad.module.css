@@ -1,0 +1,21 @@
+.notepadContainer {
+  display: flex;
+  position: relative;
+  bottom: 100px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.notepad {
+  width: 40%;
+}
+
+.notepad-window {
+  height: 300px;
+}
+
+.navContainer {
+  margin: 0;
+  padding: 0;
+}

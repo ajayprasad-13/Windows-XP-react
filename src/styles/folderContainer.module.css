@@ -1,0 +1,57 @@
+.folderContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.folderContentContainer {
+  width: 60%;
+}
+
+.utiBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.utiBtn img {
+  width: 30px;
+  height: 30px;
+}
+
+.utiText {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.utiContainer {
+  display: flex;
+  margin: 6px 0px;
+  gap: 8px;
+}
+
+.dropDown {
+  width: 10px;
+  height: 10px;
+}
+
+.horizontalLine {
+  margin: 0;
+}
+
+.addressContainer {
+  display: flex;
+  margin: 2px 0;
+  justify-content: space-between;
+}
+
+.style.addressMiddle {
+  background-color: white;
+  display: flex;
+}
+
+.addressContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

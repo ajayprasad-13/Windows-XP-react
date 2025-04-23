@@ -1,0 +1,37 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0px;
+  margin: 0;
+  align-items: center;
+}
+
+.navText {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.navTextContainer {
+  padding: 6px 7px;
+  border-radius: 1px;
+}
+
+.navTextContainer:hover {
+  background-color: #1660e8;
+  cursor: pointer;
+}
+
+.winIcon {
+  margin-top: 2px;
+  height: 22px;
+}
+
+.winIconCon {
+  display: flex;
+  justify-content: center;
+  height: 27px;
+  width: 32px;
+  background: white;
+}

@@ -4,6 +4,8 @@ const initialState = {
   isStartOpen: false,
   isResumeOpen: false,
   isComingSoonOpen: false,
+  isNotePadOpen: false,
+  isFolderOpen: false,
 };
 
 const xpSlice = createSlice({
@@ -19,10 +21,21 @@ const xpSlice = createSlice({
     toggleComingSoon: (state) => {
       state.isComingSoonOpen = !state.isComingSoonOpen;
     },
+    toggleNotePad: (state) => {
+      state.isNotePadOpen = !state.isNotePadOpen;
+    },
+    toggleFolder: (state) => {
+      state.isFolderOpen = !state.isFolderOpen;
+    },
   },
 });
 
-export const { toggleStartMenu, toggleResume, toggleComingSoon } =
-  xpSlice.actions;
+export const {
+  toggleStartMenu,
+  toggleResume,
+  toggleComingSoon,
+  toggleNotePad,
+  toggleFolder,
+} = xpSlice.actions;
 
 export default xpSlice.reducer;
