@@ -1,7 +1,7 @@
 .notepadContainer {
   display: flex;
   position: relative;
-  bottom: 100px;
+  bottom: 200px;
   height: 100%;
   width: 100%;
   justify-content: center;
