@@ -1,0 +1,87 @@
+.ieContainer {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+}
+
+.ie {
+  width: 60%;
+  position: absolute;
+  bottom: 138px;
+}
+
+.horiLine {
+  margin: 0;
+  padding: 0;
+}
+
+.utiContainer {
+  display: flex;
+  padding-left: 5px;
+  margin: 6px 0px;
+  gap: 8px;
+}
+
+.utiBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.utiBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+.utiText {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.addressContainer {
+  display: flex;
+  margin: 0px 0;
+  justify-content: space-between;
+}
+
+.addressLeft {
+  padding: 2px 1px;
+}
+
+.addressContent {
+  display: flex;
+  flex-direction: row;
+  border: 1.5px solid #afbbc1;
+  height: 18px;
+  align-items: center;
+  padding: 0 0 0 2px;
+  background: white;
+}
+
+.addressContent img {
+  width: fit-content;
+  height: 100%;
+  margin-left: auto;
+}
+
+.addressTextGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.addressRight {
+  display: flex;
+  align-items: center;
+}
+
+.addressRight img {
+  width: 20px;
+  height: fit-content;
+}
+
+.siteContainer {
+  width: 99.5%;
+  height: 400px;
+}

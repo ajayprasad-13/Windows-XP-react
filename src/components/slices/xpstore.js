@@ -5,7 +5,8 @@ const initialState = {
   isResumeOpen: false,
   isComingSoonOpen: false,
   isNotePadOpen: false,
-  isFolderOpen: false,
+  isProjectOpen: false,
+  isImgtoPdfopen: false,
 };
 
 const xpSlice = createSlice({
@@ -24,8 +25,11 @@ const xpSlice = createSlice({
     toggleNotePad: (state) => {
       state.isNotePadOpen = !state.isNotePadOpen;
     },
-    toggleFolder: (state) => {
-      state.isFolderOpen = !state.isFolderOpen;
+    toggleProject: (state) => {
+      state.isProjectOpen = !state.isProjectOpen;
+    },
+    toggleImgtoPdF: (state) => {
+      state.isImgtoPdfopen = !state.isImgtoPdfopen;
     },
   },
 });
@@ -35,7 +39,8 @@ export const {
   toggleResume,
   toggleComingSoon,
   toggleNotePad,
-  toggleFolder,
+  toggleProject,
+  toggleImgtoPdF,
 } = xpSlice.actions;
 
 export default xpSlice.reducer;

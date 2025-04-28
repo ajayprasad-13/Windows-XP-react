@@ -7,13 +7,14 @@ import {
   toggleStartMenu,
   toggleResume,
   toggleNotePad,
-  toggleFolder,
+  toggleProject,
 } from "../components/slices/xpstore";
 import ComingSoon from "../components/ComingSoon";
 import notepadicon from "../assets/notepad.png";
 import Notepad from "./Notepad";
 import folder from "../assets/folderIcon.png";
-import FolderContainer from "../components/FolderContainer";
+import Projects from "./Projects";
+import IEContainer from "./IEContainer";
 
 export default function HomePageView() {
   const dispatch = useDispatch();
@@ -22,7 +23,8 @@ export default function HomePageView() {
   const isResumeOpen = useSelector((state) => state.xp.isResumeOpen);
   const isComingSoonOpen = useSelector((state) => state.xp.isComingSoonOpen);
   const isNotepadOpen = useSelector((state) => state.xp.isNotePadOpen);
-  const isFolderOpen = useSelector((state) => state.xp.isFolderOpen);
+  const isProjectOpen = useSelector((state) => state.xp.isProjectOpen);
+  const isPdftoImgOpen = useSelector((state) => state.xp.isPdftoImgOpen);
 
   function handleBackgroundClick() {
     if (openStart) {
@@ -42,7 +44,7 @@ export default function HomePageView() {
   }
 
   function handleProjectsOpen() {
-    dispatch(toggleFolder());
+    dispatch(toggleProject());
   }
 
   const homePageIcons = [
@@ -84,7 +86,7 @@ export default function HomePageView() {
         {openStart && <StartMenuView />}
       </div>
       <div>{isNotepadOpen && <Notepad />}</div>
-      <div>{isFolderOpen && <FolderContainer />}</div>
+      <div>{isProjectOpen && <Projects />}</div>
     </div>
   );
 }

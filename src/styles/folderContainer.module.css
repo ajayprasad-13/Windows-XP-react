@@ -1,6 +1,8 @@
 .folderContainer {
   display: flex;
   justify-content: center;
+  position: relative;
+  bottom: 200px;
 }
 
 .folderContentContainer {
@@ -14,18 +16,19 @@
 }
 
 .utiBtn img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .utiText {
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .utiContainer {
   display: flex;
+  padding-left: 5px;
   margin: 6px 0px;
   gap: 8px;
 }
@@ -41,17 +44,138 @@
 
 .addressContainer {
   display: flex;
-  margin: 2px 0;
+  margin: 0px 0;
   justify-content: space-between;
 }
 
-.style.addressMiddle {
-  background-color: white;
-  display: flex;
+.addressLeft {
+  padding: 2px 1px;
 }
 
 .addressContent {
   display: flex;
   flex-direction: row;
+  border: 1.5px solid #afbbc1;
+  height: 18px;
+  align-items: center;
+  padding: 0 0 0 2px;
+  background: white;
+}
+
+.addressTextGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.addressContent img {
+  width: fit-content;
+  height: 100%;
+  margin-left: auto;
+}
+
+.addressRight {
+  display: flex;
+  align-items: center;
+}
+
+.addressRight img {
+  width: 20px;
+  height: fit-content;
+}
+
+.foldersContentContainer {
+  display: flex;
+  height: 400px;
+  flex-direction: row;
+}
+
+.folderContentLeft {
+  flex: 1;
+  height: 100%;
+  background: #667bd8;
+}
+
+.folderContentRight {
+  display: flex;
+  flex: 3;
+  height: 100%;
+  background: white;
+}
+
+.accordianContainer {
+  height: 300px;
+  padding: 15px;
+}
+
+.topAccordian {
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.accordianHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  background: linear-gradient(90deg, #f8fbff, #ccdaf4);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.accordianHeaderText {
+  color: #2853b1;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.accordianHeader img {
+  margin-right: 5px;
+}
+
+.accordianContent {
+  display: flex;
+  align-items: center;
+}
+
+.accordianContentContainer {
+  background: #d4def7;
+
+  height: 70px;
+  padding-top: 10px;
+}
+
+.accordianContainer img {
+  width: 14px;
+  height: fit-content;
+  margin-left: 12px;
+}
+
+.accordianContentText {
+  color: #364d77;
+  margin-left: 5px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.accordingBgSize {
+  height: 90px;
+}
+
+.folderImageContent {
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 40px;
+}
+
+.folderNameContent {
+  display: flex;
   justify-content: center;
+  width: 60px;
+  margin-top: 5px;
+}
+
+.folderImageContent img {
+  width: 32px;
+  height: fit-content;
 }

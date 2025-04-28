@@ -6,10 +6,24 @@ import forwardIco from "../assets/Forward.png";
 import dropDown from "../assets/drop-down-arrow.png";
 import upIco from "../assets/Up.png";
 import searchIco from "../assets/search.png";
-import folder from "../assets/folder.png";
+import folder from "../assets/folderIcon.png";
 import iconView from "../assets/Icon View.png";
+import dropDownFileIcon from "../assets/down-arrow.png";
+import goIcon from "../assets/go.png";
+import expandIcon from "../assets/expand.png";
+import fileExpProp from "../assets/explorer properties.png";
+import removeProgIcon from "../assets/Change or Remove Programs.png";
+import controlPanelIcon from "../assets/Control Panel.png";
+import networkIcon from "../assets/Network and Internet.png";
+import myDoc from "../assets/Copy To.png";
+import controlPanelPng from "../assets/controlpanelicon.png";
 
-export default function FolderContainer() {
+export default function FolderContainer({
+  windowTitle,
+  windowPath,
+  foldersArray,
+  onCloseFolder,
+}) {
   const utilityButtons = [
     {
       title: "Back",
@@ -43,19 +57,53 @@ export default function FolderContainer() {
     },
   ];
 
+  const topAccordionContent = [
+    {
+      title: "View System Information",
+      src: fileExpProp,
+    },
+    {
+      title: "Add or remove program",
+      src: removeProgIcon,
+    },
+    {
+      title: "Change a setting",
+      src: controlPanelIcon,
+    },
+  ];
+
+  const middleAccordionContent = [
+    {
+      title: "My Network place",
+      src: networkIcon,
+    },
+    {
+      title: "My Document",
+      src: myDoc,
+    },
+    {
+      title: "Shared Document",
+      src: folder,
+    },
+    {
+      title: "Control Panel",
+      src: controlPanelPng,
+    },
+  ];
+
   return (
     <div className={style.folderContainer}>
       <div className={style.folderContentContainer}>
         <Window
           style={{ margin: "0" }}
-          onClose={function noRefCheck() {}}
+          onClose={onCloseFolder}
           onHelp={function noRefCheck() {}}
           onMaximize={function noRefCheck() {}}
           onMinimize={function noRefCheck() {}}
           showClose
           showMaximize
           showMinimize
-          title="Default Window"
+          title={windowTitle}
         >
           {/* File Navbar section */}
           <FileNav />
@@ -101,26 +149,125 @@ export default function FolderContainer() {
           <hr className={style.horizontalLine}></hr>
           {/* address section */}
           <div style={{ flex: "1" }} className={style.addressContainer}>
-            <div>
+            <div className={style.addressLeft}>
               <Typography
-                style={{ margin: 0, padding: 0, fontSize: "12px" }}
+                style={{
+                  color: "#b5b4ae",
+                  margin: 0,
+                  padding: 0,
+                  fontSize: "12px",
+                }}
                 variant="paragraph"
               >
                 Address
               </Typography>
             </div>
             {/* middlesection */}
-            <div style={{ flex: "3" }} className={style.addressMiddle}>
+            <div style={{ flex: "14" }} className={style.addressMiddle}>
               <div className={style.addressContent}>
-                <img style={{ width: "14px", height: "14px" }} src={folder} />
-                <Typography variant="span">Projects</Typography>
+                <div className={style.addressTextGroup}>
+                  <img style={{ width: "14px", height: "14px" }} src={folder} />
+                  <Typography variant="span">{windowPath}</Typography>
+                </div>
+                <img
+                  src={dropDownFileIcon}
+                  style={{
+                    marginLeft: "auto",
+                  }}
+                />
               </div>
-              <div>
-                <Typography variant="span">hello</Typography>
+
+              {/* Right Section */}
+            </div>
+            <div className={style.addressRight} style={{ flex: "1" }}>
+              <img src={goIcon} />
+              <Typography
+                style={{ margin: "0", padding: "0" }}
+                variant="paragraph"
+              >
+                Go
+              </Typography>
+            </div>
+          </div>
+          {/* folder content container */}
+          <div className={style.foldersContentContainer}>
+            {/* folder content container left */}
+            <div className={style.folderContentLeft}>
+              {/* accordian container */}
+              <div className={style.accordianContainer}>
+                <div className={style.topAccordian}>
+                  <div className={style.accordianHeader}>
+                    <div>
+                      <Typography
+                        className={style.accordianHeaderText}
+                        variant="h5"
+                      >
+                        Systems Tasks
+                      </Typography>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <img src={expandIcon} />
+                    </div>
+                  </div>
+                  <div className={style.accordianContentContainer}>
+                    {topAccordionContent.map((item) => (
+                      <div className={style.accordianContent}>
+                        <img src={item.src} />
+                        <Typography
+                          className={style.accordianContentText}
+                          variant="span"
+                        >
+                          {item.title}
+                        </Typography>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={style.MiddleAccordian}>
+                  <div className={style.accordianHeader}>
+                    <div>
+                      <Typography
+                        className={style.accordianHeaderText}
+                        variant="h5"
+                      >
+                        Other files
+                      </Typography>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <img src={expandIcon} />
+                    </div>
+                  </div>
+                  <div
+                    className={`${style.accordianContentContainer} ${style.accordingBgSize}`}
+                  >
+                    {middleAccordionContent.map((item) => (
+                      <div className={`${style.accordianContent}`}>
+                        <img src={item.src} />
+                        <Typography
+                          className={`${style.accordianContentText}`}
+                          variant="span"
+                        >
+                          {item.title}
+                        </Typography>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-            <div style={{ flex: "1" }}>
-              <p style={{ margin: "0", padding: "0" }}>Right Section</p>
+            {/* folder right content */}
+            <div className={style.folderContentRight}>
+              {foldersArray.map((items) => (
+                <div onClick={items.onClickfun}>
+                  <div className={style.folderImageContent}>
+                    <img src={items.src} />
+                  </div>
+                  <div className={style.folderNameContent}>
+                    <Typography variant="span">{items.title}</Typography>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </Window>
