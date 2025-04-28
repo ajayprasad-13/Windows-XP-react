@@ -1,10 +1,31 @@
 .navContainer {
   display: flex;
-  justify-content: space-between;
-
-  padding: 0px;
-  margin: 0;
   align-items: center;
+  justify-content: space-between; /* separate text and icon */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navTextGroup {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Take up remaining space */
+  gap: 4px; /* small gap between File, Edit, View, etc */
+  overflow-x: auto; /* If it overflows, allow scrolling horizontally */
+}
+
+.navTextContainer {
+  padding: 6px 7px;
+  border-radius: 1px;
+  white-space: nowrap; /* Don't allow text wrap */
+  flex-shrink: 0; /* prevent shrinking */
+}
+
+.navTextContainer:hover {
+  background-color: #1660e8;
+  cursor: pointer;
 }
 
 .navText {
@@ -13,26 +34,18 @@
   font-size: 12px;
 }
 
-.navTextContainer {
-  padding: 6px 7px;
-  border-radius: 1px;
-}
-
-.navTextContainer:hover {
-  background-color: #1660e8;
-  cursor: pointer;
+.winIconCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27px;
+  width: 32px;
+  background: white;
+  flex-shrink: 0; /* Icon must not shrink */
 }
 
 .winIcon {
   margin-top: 2px;
   height: 22px;
   width: 22px;
-}
-
-.winIconCon {
-  display: flex;
-  justify-content: center;
-  height: 27px;
-  width: 32px;
-  background: white;
 }

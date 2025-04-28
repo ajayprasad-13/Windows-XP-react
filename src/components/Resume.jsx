@@ -17,9 +17,9 @@ export default function Resume() {
 
   return (
     <div className={style.resume}>
-      <Window>
+      <Window onClose={handleResumeClose} showClose showMaximize showMinimize>
         <div className={style.buttons}>
-          <div onClick={handleResumeClose} className={style.closeBtn}></div>
+          {/* <div onClick={handleResumeClose} className={style.closeBtn}></div> */}
         </div>
         <FileNav />
         <img src={resumeimg} />

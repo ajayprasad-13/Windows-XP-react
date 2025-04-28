@@ -1,7 +1,7 @@
 .resume {
-  position: relative;
+  position: absolute;
   width: 416px;
-  bottom: 100px;
+  bottom: 130px;
   left: 40%;
   background: black;
   padding: 0;
@@ -11,7 +11,7 @@
 }
 
 .resume img {
-  width: 400px;
+  width: 408px;
 }
 
 .buttons {
@@ -58,27 +58,27 @@ button.closeBtn:active {
 }
 
 /* .closeBtn {
-  all: unset;
-  margin-top: 2px;
-  width: 22px;
-  height: 22px;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  background-image: url("../assets/closebtn.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+    all: unset;
+    margin-top: 2px;
+    width: 22px;
+    height: 22px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-image: url("../assets/closebtn.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: transparent !important;
-    box-shadow: none !important;
-    transform: none !important;
-    outline: none !important;
-    border: none !important;
-    transition: none !important;
-    animation: none !important;
-  }
-} */
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent !important;
+      box-shadow: none !important;
+      transform: none !important;
+      outline: none !important;
+      border: none !important;
+      transition: none !important;
+      animation: none !important;
+    }
+  } */
