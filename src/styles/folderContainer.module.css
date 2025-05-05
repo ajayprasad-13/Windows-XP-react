@@ -179,3 +179,8 @@
   width: 32px;
   height: fit-content;
 }
+
+.folderNameText {
+  text-align: center;
+  margin-left: 3px;
+}

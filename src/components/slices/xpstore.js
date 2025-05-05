@@ -7,6 +7,7 @@ const initialState = {
   isNotePadOpen: false,
   isProjectOpen: false,
   isImgtoPdfopen: false,
+  isSteamDealsOpen: false,
 };
 
 const xpSlice = createSlice({
@@ -31,6 +32,9 @@ const xpSlice = createSlice({
     toggleImgtoPdF: (state) => {
       state.isImgtoPdfopen = !state.isImgtoPdfopen;
     },
+    toggleSteamDeals: (state) => {
+      state.isSteamDealsOpen = !state.isSteamDealsOpen;
+    },
   },
 });
 
@@ -41,6 +45,7 @@ export const {
   toggleNotePad,
   toggleProject,
   toggleImgtoPdF,
+  toggleSteamDeals,
 } = xpSlice.actions;
 
 export default xpSlice.reducer;

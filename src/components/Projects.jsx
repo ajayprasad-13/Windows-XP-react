@@ -1,29 +1,41 @@
 import FolderContainer from "./FolderContainer";
-import folderIcon from "../assets/folder.png";
+import ieIcon from "../assets/Internet Explorer 6.png";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleImgtoPdF, toggleProject } from "./slices/xpstore";
+import {
+  toggleImgtoPdF,
+  toggleProject,
+  toggleSteamDeals,
+} from "./slices/xpstore";
 import IEContainer from "./IEContainer";
 import style from "../styles/projects.module.css";
 
 export default function Projects() {
   const isImgtoPdfOpen = useSelector((state) => state.xp.isImgtoPdfopen);
+  const isSteamDealsOpen = useSelector((state) => state.xp.isSteamDealsOpen);
 
   function handleImgtoPdf() {
-    console.log("handleImgtoPdf");
     dispatch(toggleImgtoPdF());
-    console.log("isImgtoPdfOpen", isImgtoPdfOpen);
+  }
+
+  function handleSteamDeals() {
+    dispatch(toggleSteamDeals());
   }
 
   const dispatch = useDispatch();
   const projectFolderContent = [
     {
       title: "IMG to PDF Converter",
-      src: folderIcon,
+      src: ieIcon,
       onClickfun: handleImgtoPdf,
+      url: "https://image-to-pdf-two.vercel.app/",
+    },
+    {
+      title: "Steam Deals",
+      src: ieIcon,
+      onClickfun: handleSteamDeals,
+      url: "https://steam-deals-ten.vercel.app/",
     },
   ];
-
-  const isProjectOpen = useSelector((state) => state.xp.isProjectOpen);
 
   function handleProjectClose() {
     dispatch(toggleProject());
@@ -42,7 +54,18 @@ export default function Projects() {
         onCloseFolder={handleProjectClose}
       />
       <div className={style.ProjectsContainer}>
-        {isImgtoPdfOpen && <IEContainer onCloseProject={handleImgtoPdf} />}
+        {isImgtoPdfOpen && (
+          <IEContainer
+            ieDataArray={projectFolderContent[0]}
+            onCloseProject={handleImgtoPdf}
+          />
+        )}
+        {isSteamDealsOpen && (
+          <IEContainer
+            ieDataArray={projectFolderContent[1]}
+            onCloseProject={handleSteamDeals}
+          />
+        )}
       </div>
     </>
   );

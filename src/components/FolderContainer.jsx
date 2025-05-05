@@ -122,7 +122,6 @@ export default function FolderContainer({
                   {items.dropDownIcon && (
                     <img
                       style={{ width: "8px", height: "8px" }}
-                      // className={style.dropDown}
                       src={items.dropDownIcon}
                     />
                   )}
@@ -264,7 +263,9 @@ export default function FolderContainer({
                     <img src={items.src} />
                   </div>
                   <div className={style.folderNameContent}>
-                    <Typography variant="span">{items.title}</Typography>
+                    <Typography className={style.folderNameText} variant="span">
+                      {items.title}
+                    </Typography>
                   </div>
                 </div>
               ))}

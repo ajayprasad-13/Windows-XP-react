@@ -81,7 +81,19 @@
   height: fit-content;
 }
 
-.siteContainer {
+/* .siteContainer {
   width: 99.5%;
   height: 400px;
+} */
+
+/* .iframeWrapper {
+  width: 100%;
+} */
+
+.siteContainer {
+  transform: scale(0.75); /* 👈 scale iframe content down */
+  transform-origin: top left;
+  width: 133.33%; /* 👈 counter scale to maintain layout */
+  height: 400px; /* 400px / 0.75 to match scaled height */
+  border: none;
 }

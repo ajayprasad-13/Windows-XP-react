@@ -36,10 +36,11 @@
 
 .winIconCon {
   display: flex;
+
   justify-content: center;
   align-items: center;
-  height: 27px;
-  width: 32px;
+  max-height: 27px;
+  max-width: 32px;
   background: white;
   flex-shrink: 0; /* Icon must not shrink */
 }

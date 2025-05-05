@@ -15,7 +15,7 @@ import printerIcon from "../assets/Printer.png";
 import ieEdit from "../assets/IE Edit.png";
 import iediscuss from "../assets/IE Discuss.png";
 import dropDownFileIcon from "../assets/down-arrow.png";
-import folder from "../assets/folderIcon.png";
+import ieIcon from "../assets/Internet Explorer 6.png";
 import goIcon from "../assets/go.png";
 
 const utilityButtons = [
@@ -81,19 +81,19 @@ const utilityButtons = [
   },
 ];
 
-export default function IEContainer({ onCloseProject }) {
+export default function IEContainer({ ieDataArray }) {
   return (
     <div className={style.ieContainer}>
       <div className={style.ie}>
         <Window
-          onClose={onCloseProject}
+          onClose={ieDataArray.onClickfun}
           onHelp={function noRefCheck() {}}
           onMaximize={function noRefCheck() {}}
           onMinimize={function noRefCheck() {}}
           showClose
           showMaximize
           showMinimize
-          title="Default Window"
+          title={ieDataArray.title}
         >
           <FileNav />
           <hr className={style.horiLine}></hr>
@@ -157,9 +157,9 @@ export default function IEContainer({ onCloseProject }) {
                   <div className={style.addressTextGroup}>
                     <img
                       style={{ width: "14px", height: "14px" }}
-                      src={folder}
+                      src={ieIcon}
                     />
-                    <Typography variant="span">{`https://image-to-pdf-two.vercel.app/`}</Typography>
+                    <Typography variant="span">{ieDataArray.url}</Typography>
                   </div>
                   <img
                     src={dropDownFileIcon}
@@ -183,10 +183,12 @@ export default function IEContainer({ onCloseProject }) {
             </div>
           </div>
           <div>
-            <iframe
-              className={style.siteContainer}
-              src="https://image-to-pdf-two.vercel.app/"
-            ></iframe>
+            <div className={style.iframeWrapper}>
+              <iframe
+                className={style.siteContainer}
+                src={ieDataArray.url}
+              ></iframe>
+            </div>
           </div>
         </Window>
       </div>
